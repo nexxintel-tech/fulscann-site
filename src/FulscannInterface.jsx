@@ -258,7 +258,7 @@ export default function FulscannInterface() {
               </div>
 
               <h1 className="max-w-4xl text-5xl font-black leading-[0.98] tracking-[-0.055em] text-slate-950 md:text-7xl lg:text-8xl">
-                Turn real-world activity into trusted intelligence.
+                Trusted by African SMEs Ready for Global Trade.
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
