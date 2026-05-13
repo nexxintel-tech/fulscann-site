@@ -268,7 +268,6 @@ export default function FulscannInterface() {
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a href="#ecosystem" className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-7 text-base font-bold text-white shadow-xl shadow-blue-200 transition hover:opacity-95">
                   Explore deliverables
-                  <ArrowRightIcon className="ml-2" />
                 </a>
                 <a href="#method" className="inline-flex h-14 items-center justify-center rounded-full border border-slate-200 bg-white px-7 text-base font-bold text-slate-950 transition hover:bg-slate-50">
                   View method
