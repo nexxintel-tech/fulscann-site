@@ -89,12 +89,12 @@ const products = [
 const principles = ["Capture", "Verify", "Score", "Guide"];
 
 const deliverables = [
-  "Readiness scoring",
   "Structured diagnostics",
-  "Verification workflows",
+  "Compliance infrastructure",
+  "Risk intelligence",
   "Institution dashboards",
   "Predictive signals",
-  "Risk intelligence",
+  "maturity scoring",
 ];
 
 function LogoMark() {
