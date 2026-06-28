@@ -262,8 +262,7 @@ export default function FulscannInterface() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                Fulscann intelligent infrastructures verifies business identity and ranks Trust index, Risk gap and scores growth Readiness.
-              </p>
+Fulscann Intelligence Infrastructure verifies business identity, ranks trust, exposes risk gaps, and scores growth readiness for African SMEs seeking credible access to markets, finance, and institutional opportunities.              </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a href="#ecosystem" className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-7 text-base font-bold text-white shadow-xl shadow-blue-200 transition hover:opacity-95">
@@ -329,8 +328,9 @@ export default function FulscannInterface() {
 
         <section id="contact" className="px-5 py-20">
           <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-gradient-to-br from-blue-600 via-violet-600 to-fuchsia-500 p-10 text-center text-white shadow-2xl shadow-violet-200 md:p-16">
-            <h2 className="text-4xl font-black tracking-[-0.04em] md:text-6xl">Build the ecosystem under Fulscann.</h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/85">A clean parent identity for Vorisc, VerriLab, Intelia, and the next intelligence products you launch.</p>
+            <h2 className="text-4xl font-black tracking-[-0.04em] md:text-6xl">Build your ecosystem under Fulscann.</h2>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/85">Build the ecosystem under Fulscann.
+A clean parent identity for business verification, trust intelligence, risk profiling, and growth readiness across African enterprises.</p>
             <a href="mailto:partners@fulscann.com" className="mt-8 inline-flex h-14 items-center justify-center rounded-full bg-white px-8 text-base font-bold text-slate-950 transition hover:bg-slate-100">
               Start a conversation
             </a>
