@@ -57,7 +57,7 @@ const products = [
   {
     name: "Vorisc",
     label: "Risk intelligence",
-    description: "Risk visibility, compliance signals, verification workflows, and decision-support intelligence for institutions.",
+    description: "For business risk visibility, compliance signals, verification workflows, and decision-support intelligence for institutions.",
     Icon: RiskSignalIcon,
     href: "https://vorisc.fulscann.com",
     accent: "from-amber-400 to-orange-500",
@@ -67,9 +67,9 @@ const products = [
   {
     name: "VerriLab",
     label: "Business trust",
-    description: "SME diagnostics, structural scoring, internal control signals, and institution-ready business intelligence.",
+    description: "For SME diagnostics, structural scoring, internal control signals, and institution-ready business intelligence.",
     Icon: CubeIcon,
-    href: "https://verrilab.fulscann.com",
+    href: "https://verilab.fulscann.com",
     accent: "from-blue-500 to-indigo-500",
     bg: "bg-blue-50",
     text: "text-blue-700",
@@ -254,15 +254,15 @@ export default function FulscannInterface() {
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                Intelligence systems for risk, trust, readiness, and growth
+                Intelligent systems for risk, trust, readiness, and growth 
               </div>
 
               <h1 className="max-w-4xl text-5xl font-black leading-[0.98] tracking-[-0.055em] text-slate-950 md:text-7xl lg:text-8xl">
-                Trusted by African SMEs Ready for Global Trade.
+                Trusted by African SMEs Ready for Global Scale.
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                Fulscann builds intelligence infrastructure that captures data, verifies activity, scores readiness, and guides better decisions across risk, enterprise, and capability development.
+                Fulscann intelligent infrastructures verifies business identity and ranks Trust index, Risk gap and scores growth Readiness.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -284,7 +284,7 @@ export default function FulscannInterface() {
             <div className="mx-auto mb-12 max-w-2xl text-center">
               <p className="text-sm font-black uppercase tracking-[0.25em] text-blue-600">Core platforms</p>
               <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 md:text-6xl">Built around measurable outcomes.</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600">Each product turns fragmented activity into structured intelligence that people, businesses, and institutions can act on.</p>
+              <p className="mt-5 text-lg leading-8 text-slate-600">Fulscann turns fragmented business activity into structured intelligence, giving people, businesses, and institutions the clarity to assess trust, manage risk, and act with confidence.</p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
