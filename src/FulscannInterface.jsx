@@ -329,8 +329,7 @@ Fulscann Intelligence Infrastructure verifies business identity, ranks trust, ex
         <section id="contact" className="px-5 py-20">
           <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-gradient-to-br from-blue-600 via-violet-600 to-fuchsia-500 p-10 text-center text-white shadow-2xl shadow-violet-200 md:p-16">
             <h2 className="text-4xl font-black tracking-[-0.04em] md:text-6xl">Build your ecosystem under Fulscann.</h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/85">Build the ecosystem under Fulscann.
-A clean parent identity for business verification, trust intelligence, risk profiling, and growth readiness across African enterprises.</p>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/85">A clean parent identity for business verification, trust intelligence, risk profiling, and growth readiness across African enterprises.</p>
             <a href="mailto:partners@fulscann.com" className="mt-8 inline-flex h-14 items-center justify-center rounded-full bg-white px-8 text-base font-bold text-slate-950 transition hover:bg-slate-100">
               Start a conversation
             </a>
