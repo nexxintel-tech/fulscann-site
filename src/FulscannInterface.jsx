@@ -262,7 +262,7 @@ export default function FulscannInterface() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-An Intelligence Infrastructure that exposes structural risk gaps, scores growth readiness and ranks trust index, for verified African SMEs seeking credible access to finance, and institutional market opportunities.              </p>
+An Infrastructure for business intelligence that exposes structural risk gaps, scores growth potentials and rank organizational trust for verified African SMEs seeking credible access to finance, and institutional opportunities.              </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a href="#ecosystem" className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-7 text-base font-bold text-white shadow-xl shadow-blue-200 transition hover:opacity-95">
