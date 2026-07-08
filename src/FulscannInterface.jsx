@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
 function ArrowRightIcon({ className = "h-4 w-4" }) {
@@ -220,7 +220,235 @@ function ProductCard({ product }) {
   );
 }
 
+function ScanQuestion({ title, options, value, onChange }) {
+  return (
+    <div>
+      <h3 className="text-lg font-black text-slate-950">{title}</h3>
+
+      <div className="mt-3 grid gap-3 sm:grid-cols-2">
+        {options.map((option) => (
+          <button
+            key={option}
+            type="button"
+            onClick={() => onChange(option)}
+            className={`rounded-2xl border px-4 py-3 text-left text-sm font-bold transition ${
+              value === option
+                ? "border-blue-500 bg-blue-50 text-blue-700"
+                : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+            }`}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function BusinessScanModal({ onClose }) {
+  const [answers, setAnswers] = useState({
+    organization: "",
+    priority: "",
+    challenge: "",
+    outcome: "",
+  });
+
+  const productScores = useMemo(() => {
+    const scores = {
+      VerriLab: 0,
+      Vorisc: 0,
+      FleetMap: 0,
+      Intelia: 0,
+    };
+
+    const values = Object.values(answers).join(" ").toLowerCase();
+
+    if (
+      values.includes("sme") ||
+      values.includes("enterprise") ||
+      values.includes("business trust") ||
+      values.includes("internal controls") ||
+      values.includes("governance") ||
+      values.includes("funding") ||
+      values.includes("readiness") ||
+      values.includes("business structure")
+    ) {
+      scores.VerriLab += 6;
+    }
+
+    if (
+      values.includes("risk") ||
+      values.includes("supplier") ||
+      values.includes("verification") ||
+      values.includes("trade") ||
+      values.includes("compliance") ||
+      values.includes("institution")
+    ) {
+      scores.Vorisc += 6;
+    }
+
+    if (
+      values.includes("logistics") ||
+      values.includes("fleet") ||
+      values.includes("delivery") ||
+      values.includes("vehicle") ||
+      values.includes("haulage") ||
+      values.includes("operations")
+    ) {
+      scores.FleetMap += 6;
+    }
+
+    if (
+      values.includes("training") ||
+      values.includes("skills") ||
+      values.includes("capability") ||
+      values.includes("learning") ||
+      values.includes("staff capability")
+    ) {
+      scores.Intelia += 6;
+    }
+
+    return scores;
+  }, [answers]);
+
+  const recommendation = Object.entries(productScores).sort((a, b) => b[1] - a[1])[0][0];
+
+  const productLinks = {
+    VerriLab: "https://verilab.fulscann.com",
+    Vorisc: "https://vorisc.fulscann.com",
+    FleetMap: "https://fleetmap.fulscann.com",
+    Intelia: "https://intelia.fulscann.com",
+  };
+
+  const productDescriptions = {
+    VerriLab: "Best for business trust, SME diagnostics, internal controls, readiness scoring, and institutional confidence.",
+    Vorisc: "Best for risk intelligence, supplier verification, trade confidence, compliance signals, and decision-support intelligence.",
+    FleetMap: "Best for logistics visibility, fleet operations, driver management, haulage workflows, and fuel accountability.",
+    Intelia: "Best for capability transfer, training access, learner support, and practical skills infrastructure.",
+  };
+
+  function updateAnswer(field, value) {
+    setAnswers((prev) => ({ ...prev, [field]: value }));
+  }
+
+  const completed = Object.values(answers).every(Boolean);
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/60 px-4 backdrop-blur-sm">
+      <div className="w-full max-w-3xl overflow-hidden rounded-[2rem] bg-white shadow-2xl">
+        <div className="flex items-start justify-between border-b border-slate-200 p-6">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-blue-600">
+              Fulscann Business Scan
+            </p>
+            <h2 className="mt-2 text-3xl font-black tracking-[-0.04em] text-slate-950">
+              Scan your business
+            </h2>
+            <p className="mt-2 max-w-xl text-slate-600">
+              Answer a few quick questions and Fulscann will identify the solution that best fits your current priority.
+            </p>
+          </div>
+
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-full border border-slate-200 px-4 py-2 font-black text-slate-600 hover:bg-slate-50"
+            aria-label="Close business scan"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="max-h-[75vh] overflow-y-auto p-6">
+          <div className="grid gap-6">
+            <ScanQuestion
+              title="Tell us about your organization."
+              value={answers.organization}
+              options={[
+                "SME",
+                "Enterprise",
+                "Logistics company",
+                "Manufacturer",
+                "Financial institution",
+                "Mining company",
+                "Training provider",
+              ]}
+              onChange={(value) => updateAnswer("organization", value)}
+            />
+
+            <ScanQuestion
+              title="What are you trying to improve first?"
+              value={answers.priority}
+              options={[
+                "Business trust",
+                "Internal controls",
+                "Fleet operations",
+                "Supplier verification",
+                "Trade risk",
+                "Capability transfer",
+                "Funding readiness",
+              ]}
+              onChange={(value) => updateAnswer("priority", value)}
+            />
+
+            <ScanQuestion
+              title="Where do you currently have the least visibility?"
+              value={answers.challenge}
+              options={[
+                "Risk signals",
+                "Business structure",
+                "Vehicle and delivery activity",
+                "Supplier confidence",
+                "Staff capability",
+                "Compliance readiness",
+              ]}
+              onChange={(value) => updateAnswer("challenge", value)}
+            />
+
+            <ScanQuestion
+              title="What outcome matters most right now?"
+              value={answers.outcome}
+              options={[
+                "Build trust",
+                "Reduce risk",
+                "Monitor operations",
+                "Verify suppliers",
+                "Prepare for funding",
+                "Improve capability",
+              ]}
+              onChange={(value) => updateAnswer("outcome", value)}
+            />
+          </div>
+
+          {completed && (
+            <div className="mt-8 rounded-[1.5rem] bg-slate-950 p-6 text-white">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-300">
+                Recommended starting point
+              </p>
+
+              <h3 className="mt-3 text-4xl font-black">{recommendation}</h3>
+
+              <p className="mt-3 text-slate-300">
+                {productDescriptions[recommendation]}
+              </p>
+
+              <a
+                href={productLinks[recommendation]}
+                className="mt-6 inline-flex h-12 items-center justify-center rounded-full bg-white px-6 font-bold text-slate-950 hover:bg-slate-100"
+              >
+                Launch {recommendation}
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function FulscannInterface() {
+  const [scanOpen, setScanOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#fbfcff] text-slate-950" style={{ fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" }}>
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
@@ -254,7 +482,7 @@ export default function FulscannInterface() {
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                Intelligent systems for risk, trust, readiness, and growth 
+                Intelligent systems for risk, trust, readiness, and growth
               </div>
 
               <h1 className="max-w-4xl text-5xl font-black leading-[0.98] tracking-[-0.055em] text-slate-950 md:text-7xl lg:text-8xl">
@@ -262,12 +490,18 @@ export default function FulscannInterface() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-A business intelligence infrastructure that exposes structural risk gaps, scores growth potentials and rank organizational trust for verified African SMEs seeking credible access to finance, and institutional opportunities.              </p>
+                A business intelligence infrastructure that exposes structural risk gaps, scores growth potentials and rank organizational trust for verified African SMEs seeking credible access to finance, and institutional opportunities.
+              </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <a href="#ecosystem" className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-7 text-base font-bold text-white shadow-xl shadow-blue-200 transition hover:opacity-95">
-                  View method
-                </a>
+                <button
+                  type="button"
+                  onClick={() => setScanOpen(true)}
+                  className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-7 text-base font-bold text-white shadow-xl shadow-blue-200 transition hover:opacity-95"
+                >
+                  Scan your business
+                </button>
+
                 <a href="#method" className="inline-flex h-14 items-center justify-center rounded-full border border-slate-200 bg-white px-7 text-base font-bold text-slate-950 transition hover:bg-slate-50">
                   Explore deliverables
                 </a>
@@ -336,6 +570,8 @@ A business intelligence infrastructure that exposes structural risk gaps, scores
           </div>
         </section>
       </main>
+
+      {scanOpen && <BusinessScanModal onClose={() => setScanOpen(false)} />}
     </div>
   );
 }
