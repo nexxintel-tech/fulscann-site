@@ -314,7 +314,7 @@ function BusinessScanModal({ onClose }) {
   const recommendation = Object.entries(productScores).sort((a, b) => b[1] - a[1])[0][0];
 
   const productLinks = {
-    VerriLab: "https://verilab.fulscann.com",
+    VerriLab: "https://verilab.fulscann.com/login?mode=create",
     Vorisc: "https://vorisc.fulscann.com",
     FleetMap: "https://fleetmap.fulscann.com",
     Intelia: "https://intelia.fulscann.com",
