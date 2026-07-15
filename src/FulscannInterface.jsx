@@ -482,15 +482,15 @@ export default function FulscannInterface() {
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                Intelligent systems for risk, trust, readiness, and growth
+                ..an Infrastrusture for business growth, 
               </div>
 
               <h1 className="max-w-4xl text-5xl font-black leading-[0.98] tracking-[-0.055em] text-slate-950 md:text-7xl lg:text-8xl">
-                Trusted by African SMEs Ready for Global Scale.
+                An Intelligent System Is Your Most Valuable Business Asset.
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                A business intelligence infrastructure that exposes structural risk gaps, scores growth potentials and rank organizational trust for verified African SMEs seeking credible access to finance, and institutional opportunities.
+                A business intelligence infrastructure that exposes operational risk gaps, scores growth potentials and rank organizational trust for verified African SMEs seeking credible access to institutional opportunities.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
