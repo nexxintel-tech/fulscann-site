@@ -517,7 +517,7 @@ export default function FulscannInterface() {
             <div className="mx-auto mb-12 max-w-2xl text-center">
               <p className="text-sm font-black uppercase tracking-[0.25em] text-blue-600">Core platforms</p>
               <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 md:text-6xl">Built around measurable outcomes.</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600">Fulscann turns fragmented business activity into structured intelligence, giving people, businesses, and institutions the clarity to assess trust, manage risk, and act with confidence.</p>
+              <p className="mt-5 text-lg leading-8 text-slate-600">Fulscann turns fragmented business activity into structured intelligence, giving businesses, and institutions the clarity to assess trust, manage risk, and act with confidence.</p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
@@ -534,7 +534,7 @@ export default function FulscannInterface() {
               <div>
                 <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-300">Fulscann operating layer</p>
                 <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] md:text-6xl">From raw activity to decision confidence.</h2>
-                <p className="mt-6 text-lg leading-8 text-slate-300">Our USP is not just software. It is the ability to convert weak, scattered, or informal data into usable signals for readiness, risk, trust, and growth.</p>
+                <p className="mt-6 text-lg leading-8 text-slate-300">Fulscann is a predictive platform that converts weak, scattered, or informal data into usable signals for readiness, risk, trust, and growth.</p>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
