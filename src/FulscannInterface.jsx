@@ -517,7 +517,7 @@ export default function FulscannInterface() {
             <div className="mx-auto mb-12 max-w-2xl text-center">
               <p className="text-sm font-black uppercase tracking-[0.25em] text-blue-600">Core platforms</p>
               <h2 className="mt-4 text-4xl font-black tracking-[-0.04em] text-slate-950 md:text-6xl">Built around measurable outcomes.</h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600">Fulscann turns fragmented business activity into structured intelligence, giving businesses, and institutions the clarity to assess operational gaps, manage compliance risk, and act with evidence-based confidence.</p>
+              <p className="mt-5 text-lg leading-8 text-slate-600">Fulscann turns fragmented business activity into structured intelligence, giving businesses, and institutions the clarity to assess operational gaps, manage compliance risk, and act with connected evidence.</p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
