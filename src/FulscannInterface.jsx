@@ -57,7 +57,7 @@ const products = [
   {
     name: "Vorisc",
     label: "Risk intelligence",
-    description: "For trade corridor risk visibility, origin confidence index, verification workflows, and decision-support intelligence for organizations.",
+    description: "For trade corridor risk visibility, origin confidence index, verification workflows, and decision-support intelligence for international trade.",
     Icon: RiskSignalIcon,
     href: "https://vorisc.fulscann.com",
     accent: "from-amber-400 to-orange-500",
