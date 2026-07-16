@@ -57,7 +57,7 @@ const products = [
   {
     name: "Vorisc",
     label: "Risk intelligence",
-    description: "For business risk visibility, compliance signals, verification workflows, and decision-support intelligence for institutions.",
+    description: "For trade corridor risk visibility, origin confidence index, verification workflows, and decision-support intelligence for organizations.",
     Icon: RiskSignalIcon,
     href: "https://vorisc.fulscann.com",
     accent: "from-amber-400 to-orange-500",
@@ -65,9 +65,9 @@ const products = [
     text: "text-amber-700",
   },
   {
-    name: "VerriLab",
+    name: "VeriLab",
     label: "Business trust",
-    description: "For SME diagnostics, structural scoring, internal control signals, and institution-ready business intelligence.",
+    description: "For SME diagnostics, internal control mechanism, and operational intelligence.",
     Icon: CubeIcon,
     href: "https://verilab.fulscann.com",
     accent: "from-blue-500 to-indigo-500",
