@@ -486,11 +486,11 @@ export default function FulscannInterface() {
               </div>
 
               <h1 className="max-w-4xl text-5xl font-black leading-[0.98] tracking-[-0.055em] text-slate-950 md:text-7xl lg:text-8xl">
-                Trusted by African SMEs Ready for Global Scale.
+                Connect to a Personalized Solution for African Business
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                A business intelligence infrastructure that exposes operational risk gaps, scores growth potentials and rank organizational trust for verified African SMEs seeking credible access to institutional opportunities.
+                One ecosystem. Tailored intelligence to help businesses operate, compete, and scale with confidence.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
