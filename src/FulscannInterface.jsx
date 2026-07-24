@@ -255,7 +255,7 @@ function BusinessScanModal({ onClose }) {
 
   const productScores = useMemo(() => {
     const scores = {
-      VerriLab: 0,
+      VeriLab: 0,
       Vorisc: 0,
       FleetMap: 0,
       Intelia: 0,
@@ -273,7 +273,7 @@ function BusinessScanModal({ onClose }) {
       values.includes("readiness") ||
       values.includes("business structure")
     ) {
-      scores.VerriLab += 6;
+      scores.VeriLab += 6;
     }
 
     if (
@@ -314,14 +314,14 @@ function BusinessScanModal({ onClose }) {
   const recommendation = Object.entries(productScores).sort((a, b) => b[1] - a[1])[0][0];
 
   const productLinks = {
-    VerriLab: "https://verilab.fulscann.com/login?mode=create",
+    VeriLab: "https://verilab.fulscann.com/login?mode=create",
     Vorisc: "https://vorisc.fulscann.com",
     FleetMap: "https://fleetmap.fulscann.com",
     Intelia: "https://intelia.fulscann.com",
   };
 
   const productDescriptions = {
-    VerriLab: "Best for business trust, SME diagnostics, internal controls, readiness scoring, and institutional confidence.",
+    VeriLab: "Best for business trust, SME diagnostics, internal controls, readiness scoring, and institutional confidence.",
     Vorisc: "Best for risk intelligence, supplier verification, trade confidence, compliance signals, and decision-support intelligence.",
     FleetMap: "Best for logistics visibility, fleet operations, driver management, haulage workflows, and fuel accountability.",
     Intelia: "Best for capability transfer, training access, learner support, and practical skills infrastructure.",
