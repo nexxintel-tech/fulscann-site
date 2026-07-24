@@ -490,7 +490,7 @@ export default function FulscannInterface() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                One ecosystem. Tailored intelligence to help businesses operate, compete, and scale with confidence.
+                One ecosystem for tailored intelligence to help businesses operate, compete, and scale with confidence. Whether you're improving governance structure, managing operational risks, activating trade corridor, or monitoring performance outcomes.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
