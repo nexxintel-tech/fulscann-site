@@ -482,15 +482,15 @@ export default function FulscannInterface() {
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
               <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-sm font-bold text-blue-700 shadow-sm">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                An intelligent system for readness, growth and trust 
+                An intelligent system for readiness, growth and trust 
               </div>
 
               <h1 className="max-w-4xl text-5xl font-black leading-[0.98] tracking-[-0.055em] text-slate-950 md:text-7xl lg:text-8xl">
-                Connect to a Personalized Solution for African Business
+                Connect to a Personalized Solution for Your Business
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                One ecosystem for tailored intelligence to help businesses operate, compete, and scale with confidence. Whether you're improving governance structure, managing operational risks, or activating trade corridor. Fulscann connects you to the right solution.
+                One ecosystem for tailored intelligence to help businesses operate, compete, and scale with confidence.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
