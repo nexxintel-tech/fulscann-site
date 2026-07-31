@@ -446,6 +446,99 @@ function BusinessScanModal({ onClose }) {
   );
 }
 
+function Footer() {
+  const sections = [
+    {
+      title: "Platform",
+      links: [
+        { label: "How it works", href: "https://verilab.fulscann.com/#how-it-works" },
+        { label: "Solutions", href: "https://verilab.fulscann.com/#solutions" },
+        { label: "Products", href: "https://verilab.fulscann.com/#products" },
+        { label: "Security", href: "https://verilab.fulscann.com/#security" },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        { label: "Insights", href: "https://verilab.fulscann.com/help/getting-started" },
+        { label: "Help Center", href: "https://verilab.fulscann.com/help/getting-started" },
+        { label: "Guides", href: "https://verilab.fulscann.com/#guides" },
+        { label: "Developers", href: "https://verilab.fulscann.com/ic" },
+      ],
+    },
+    {
+      title: "Company",
+      links: [
+        { label: "About Us", href: "https://verilab.fulscann.com/#about" },
+        { label: "Careers", href: "https://verilab.fulscann.com/#careers" },
+        { label: "Partners", href: "https://verilab.fulscann.com/#partners" },
+        { label: "Contact Us", href: "https://verilab.fulscann.com/#contact" },
+      ],
+    },
+  ];
+
+  const socialLinks = [
+    { label: "LinkedIn", href: "https://verilab.fulscann.com/#" },
+    { label: "X", href: "https://verilab.fulscann.com/#" },
+    { label: "YouTube", href: "https://verilab.fulscann.com/#" },
+  ];
+
+  return (
+    <footer className="bg-slate-950 text-slate-300">
+      <div className="mx-auto max-w-7xl px-5 py-16">
+        <div className="grid gap-10 lg:grid-cols-[1.8fr_1fr_1fr_1fr]">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.3em] text-cyan-300">FULSCANN</p>
+            <p className="mt-5 max-w-sm text-3xl font-black tracking-[-0.04em] text-white">
+              Control intelligence for trust.
+            </p>
+            <p className="mt-6 max-w-md text-sm leading-7 text-slate-400">
+              Get insights on trust, control, and SME readiness.
+            </p>
+          </div>
+
+          {sections.map((section) => (
+            <div key={section.title}>
+              <p className="text-sm font-black uppercase tracking-[0.2em] text-slate-400">{section.title}</p>
+              <ul className="mt-5 space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm text-slate-300 transition hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 flex flex-col gap-6 border-t border-slate-800 pt-8 text-sm sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-slate-500">© 2026 Fulscann Technologies Ltd. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-4">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-slate-400 transition hover:text-white"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
 export default function FulscannInterface() {
   const [scanOpen, setScanOpen] = useState(false);
 
@@ -490,7 +583,7 @@ export default function FulscannInterface() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                One ecosystem for tailored intelligence to help businesses operate, compete, and scale with confidence.
+                An ecosystem for tailored intelligence to help your businesses operate, compete, and scale with confidence.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -563,13 +656,16 @@ export default function FulscannInterface() {
         <section id="contact" className="px-5 py-20">
           <div className="mx-auto max-w-5xl rounded-[2.5rem] bg-gradient-to-br from-blue-600 via-violet-600 to-fuchsia-500 p-10 text-center text-white shadow-2xl shadow-violet-200 md:p-16">
             <h2 className="text-4xl font-black tracking-[-0.04em] md:text-6xl">Build your ecosystem under Fulscann.</h2>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/85">A clean parent identity for business verification, trust intelligence, risk profiling, and growth readiness across African enterprises.</p>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-white/85">A clean parent identity for  activation of trade corridor, verification of governance structure, risk profiling and trust intelligence for growth readiness across African enterprises.
+            </p>
             <a href="mailto:partners@fulscann.com" className="mt-8 inline-flex h-14 items-center justify-center rounded-full bg-white px-8 text-base font-bold text-slate-950 transition hover:bg-slate-100">
               Start a conversation
             </a>
           </div>
         </section>
       </main>
+
+      <Footer />
 
       {scanOpen && <BusinessScanModal onClose={() => setScanOpen(false)} />}
     </div>
