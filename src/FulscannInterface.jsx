@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 
 function ArrowRightIcon({ className = "h-4 w-4" }) {
@@ -267,7 +267,7 @@ function BusinessScanModal({ onClose }) {
     const scores = {
       VeriLab: 0,
       Vorisc: 0,
-      FleetMap: 0,
+      Fleeto: 0,
       Intelia: 0,
     };
 
@@ -305,7 +305,7 @@ function BusinessScanModal({ onClose }) {
       values.includes("haulage") ||
       values.includes("operations")
     ) {
-      scores.FleetMap += 6;
+      scores.Fleeto += 6;
     }
 
     if (
@@ -326,14 +326,14 @@ function BusinessScanModal({ onClose }) {
   const productLinks = {
     VeriLab: "https://verilab.fulscann.com/login?mode=create",
     Vorisc: "https://vorisc.fulscann.com",
-    FleetMap: "https://fleetmap.fulscann.com",
+    Fleeto: "https://fleeto.fulscann.com",
     Intelia: "https://intelia.fulscann.com",
   };
 
   const productDescriptions = {
     VeriLab: "Best for business trust, SME diagnostics, internal controls, readiness scoring, and institutional confidence.",
     Vorisc: "Best for risk intelligence, supplier verification, trade confidence, compliance signals, and decision-support intelligence.",
-    FleetMap: "Best for logistics visibility, fleet operations, driver management, haulage workflows, and fuel accountability.",
+    Fleeto: "Best for logistics visibility, fleet operations, driver management, haulage workflows, and fuel accountability.",
     Intelia: "Best for capability transfer, training access, learner support, and practical skills infrastructure.",
   };
 
