@@ -75,6 +75,16 @@ const products = [
     text: "text-blue-700",
   },
   {
+    name: "Fleeto",
+    label: "Fleet Management",
+    description: "truck financing brokerage, operator access, Fleet management, Asset optimization.",
+    Icon: SparkIcon,
+    href: "https://fleeto.fulscann.com",
+    accent: "from-violet-500 to-fuchsia-500",
+    bg: "bg-violet-50",
+    text: "text-violet-700",
+  },
+  {
     name: "Intelia",
     label: "Capability transfer",
     description: "Training brokerage, learner access, trainer discovery, and practical skill-transfer infrastructure.",
