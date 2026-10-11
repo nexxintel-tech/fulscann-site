@@ -77,7 +77,7 @@ const products = [
   {
     name: "Fleeto",
     label: "Fleet Management",
-    description: "truck financing brokerage, operator access, Fleet management, Asset optimization.",
+    description: "Fleet financing brokerage, operator access, Fleet management, Asset optimization.",
     Icon: SparkIcon,
     href: "https://fleeto.fulscann.com",
     accent: "from-violet-500 to-fuchsia-500",
@@ -593,7 +593,7 @@ export default function FulscannInterface() {
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-600 md:text-xl">
-                An ecosystem for tailored intelligence to help your businesses operate, compete, and scale with confidence.
+                An ecosystem for tailored risk intelligence to mitigate exposure, bolster credit confidence and strengthen portfolio performance.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
