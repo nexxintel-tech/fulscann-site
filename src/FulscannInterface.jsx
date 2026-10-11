@@ -109,11 +109,59 @@ const deliverables = [
 
 function LogoMark() {
   return (
-    <div className="relative h-11 w-11 overflow-hidden rounded-2xl bg-slate-950 shadow-lg shadow-blue-200">
-      <div className="absolute -left-2 top-1 h-5 w-12 rotate-[-18deg] rounded-full bg-gradient-to-r from-amber-400 to-orange-400" />
-      <div className="absolute -left-1 top-4 h-5 w-11 rotate-[-18deg] rounded-full bg-gradient-to-r from-blue-500 to-indigo-500" />
-      <div className="absolute -left-1 top-7 h-5 w-9 rotate-[-18deg] rounded-full bg-gradient-to-r from-violet-500 to-fuchsia-500" />
-    </div>
+    <svg
+      viewBox="0 0 512 512"
+      aria-hidden="true"
+      className="h-11 w-11 rounded-2xl shadow-lg shadow-blue-200"
+      role="img"
+    >
+      <defs>
+        <linearGradient id="fulscann-rim" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#0878ff" />
+          <stop offset="0.38" stopColor="#00b9d7" />
+          <stop offset="0.68" stopColor="#14e477" />
+          <stop offset="1" stopColor="#75f52b" />
+        </linearGradient>
+        <linearGradient id="fulscann-blue" x1="0" y1="0" x2="1" y2="0.1">
+          <stop offset="0" stopColor="#0878ff" />
+          <stop offset="1" stopColor="#0875f4" />
+        </linearGradient>
+        <linearGradient id="fulscann-green" x1="0" y1="0" x2="1" y2="0.2">
+          <stop offset="0" stopColor="#10c957" />
+          <stop offset="1" stopColor="#8be63b" />
+        </linearGradient>
+        <linearGradient id="fulscann-tail" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#078d42" />
+          <stop offset="1" stopColor="#65db37" />
+        </linearGradient>
+        <clipPath id="fulscann-innerClip">
+          <rect x="18" y="18" width="476" height="476" rx="91" />
+        </clipPath>
+      </defs>
+
+      <rect x="0" y="0" width="512" height="512" rx="105" fill="url(#fulscann-rim)" />
+      <rect x="18" y="18" width="476" height="476" rx="88" fill="#031943" />
+
+      <g clipPath="url(#fulscann-innerClip)">
+        <path
+          d="M124 159 C139 130 160 119 193 111 L334 78 C365 71 391 79 406 98 C419 115 416 136 404 153 L394 169 C379 158 366 156 344 161 L183 197 C151 204 132 218 124 239 Z"
+          fill="url(#fulscann-blue)"
+        />
+        <path
+          d="M125 259 C138 231 160 219 194 211 L350 176 C376 170 394 178 405 193 C417 210 408 228 389 239 C380 244 365 248 347 252 L176 292 C148 299 132 314 125 335 Z"
+          fill="#fff"
+        />
+        <path
+          d="M125 354 C139 326 161 314 194 306 L294 283 C319 277 339 285 349 300 C361 319 350 338 329 348 C321 352 310 355 294 359 L193 383 C166 390 146 405 135 426 C123 448 131 468 151 480 C171 492 196 482 207 464 C213 454 216 443 216 427 L216 389 L194 394 C161 402 141 416 132 436 L125 423 Z"
+          fill="url(#fulscann-green)"
+        />
+        <path
+          d="M135 426 C151 402 173 390 216 379 L216 427 C216 445 212 457 202 469 C187 486 165 488 149 478 C135 469 129 448 135 426 Z"
+          fill="url(#fulscann-tail)"
+          opacity="0.62"
+        />
+      </g>
+    </svg>
   );
 }
 
