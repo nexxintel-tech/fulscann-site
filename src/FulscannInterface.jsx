@@ -55,9 +55,19 @@ function CheckIcon({ className = "h-5 w-5" }) {
 
 const products = [
   {
-    name: "Vorisc",
-    label: "Risk intelligence",
+    name: "Vectra",
+    label: "Trade corridor risk intelligence",
     description: "For trade corridor risk visibility, origin confidence index, verification workflows, and decision-support intelligence for international trade.",
+    Icon: RiskSignalIcon,
+    href: "https://vectra.fulscann.com",
+    accent: "from-amber-400 to-orange-500",
+    bg: "bg-amber-50",
+    text: "text-amber-700",
+  },
+  {
+    name: "Vorisc",
+    label: "Credit risk intelligence",
+    description: "For credit pre-disbursement risk intelligence, post-allocation exposure mitigation, and asset operational oversight.",
     Icon: RiskSignalIcon,
     href: "https://vorisc.fulscann.com",
     accent: "from-amber-400 to-orange-500",
@@ -75,21 +85,21 @@ const products = [
     text: "text-blue-700",
   },
   {
-    name: "Fleeto",
-    label: "Fleet Management",
-    description: "Fleet financing brokerage, operator access, Fleet management, Asset optimization.",
+    name: "Visio",
+    label: "Internal control",
+    description: "Workflow observability, operational transparency, control assurance, and decision visibility across business processes.",
     Icon: SparkIcon,
-    href: "https://fleeto.fulscann.com",
+    href: "https://visio.fulscann.com",
     accent: "from-violet-500 to-fuchsia-500",
     bg: "bg-violet-50",
     text: "text-violet-700",
   },
   {
-    name: "Intelia",
-    label: "Capability transfer",
-    description: "Training brokerage, learner access, trainer discovery, and practical skill-transfer infrastructure.",
+    name: "Vantage",
+    label: "Strategic growth",
+    description: "Position assessment, growth strategy support, and high-impact capital and resource decision-making.",
     Icon: SparkIcon,
-    href: "https://intelia.fulscann.com",
+    href: "https://vantage.fulscann.com",
     accent: "from-violet-500 to-fuchsia-500",
     bg: "bg-violet-50",
     text: "text-violet-700",
@@ -266,9 +276,10 @@ function BusinessScanModal({ onClose }) {
   const productScores = useMemo(() => {
     const scores = {
       VeriLab: 0,
+      Vectra: 0,
       Vorisc: 0,
-      Fleeto: 0,
-      Intelia: 0,
+      Visio: 0,
+      Vantage: 0,
     };
 
     const values = Object.values(answers).join(" ").toLowerCase();
@@ -287,35 +298,56 @@ function BusinessScanModal({ onClose }) {
     }
 
     if (
-      values.includes("risk") ||
+      values.includes("trade") ||
+      values.includes("corridor") ||
+      values.includes("origin") ||
       values.includes("supplier") ||
       values.includes("verification") ||
-      values.includes("trade") ||
+      values.includes("international trade") ||
       values.includes("compliance") ||
-      values.includes("institution")
+      values.includes("risk visibility")
+    ) {
+      scores.Vectra += 6;
+    }
+
+    if (
+      values.includes("credit") ||
+      values.includes("pre-disbursement") ||
+      values.includes("disbursement") ||
+      values.includes("post-allocation") ||
+      values.includes("allocation") ||
+      values.includes("exposure") ||
+      values.includes("asset") ||
+      values.includes("oversight") ||
+      values.includes("portfolio") ||
+      values.includes("loan")
     ) {
       scores.Vorisc += 6;
     }
 
     if (
-      values.includes("logistics") ||
-      values.includes("fleet") ||
-      values.includes("delivery") ||
-      values.includes("vehicle") ||
-      values.includes("haulage") ||
-      values.includes("operations")
+      values.includes("internal control") ||
+      values.includes("workflow") ||
+      values.includes("observability") ||
+      values.includes("operational transparency") ||
+      values.includes("oversight") ||
+      values.includes("operations") ||
+      values.includes("process visibility")
     ) {
-      scores.Fleeto += 6;
+      scores.Visio += 6;
     }
 
     if (
-      values.includes("training") ||
-      values.includes("skills") ||
-      values.includes("capability") ||
-      values.includes("learning") ||
-      values.includes("staff capability")
+      values.includes("growth") ||
+      values.includes("position") ||
+      values.includes("strategy") ||
+      values.includes("capital") ||
+      values.includes("resource") ||
+      values.includes("investment") ||
+      values.includes("portfolio") ||
+      values.includes("decision")
     ) {
-      scores.Intelia += 6;
+      scores.Vantage += 6;
     }
 
     return scores;
@@ -325,16 +357,18 @@ function BusinessScanModal({ onClose }) {
 
   const productLinks = {
     VeriLab: "https://verilab.fulscann.com/login?mode=create",
+    Vectra: "https://vectra.fulscann.com",
     Vorisc: "https://vorisc.fulscann.com",
-    Fleeto: "https://fleeto.fulscann.com",
-    Intelia: "https://intelia.fulscann.com",
+    Visio: "https://visio.fulscann.com",
+    Vantage: "https://vantage.fulscann.com",
   };
 
   const productDescriptions = {
     VeriLab: "Best for business trust, SME diagnostics, internal controls, readiness scoring, and institutional confidence.",
-    Vorisc: "Best for risk intelligence, supplier verification, trade confidence, compliance signals, and decision-support intelligence.",
-    Fleeto: "Best for logistics visibility, fleet operations, driver management, haulage workflows, and fuel accountability.",
-    Intelia: "Best for capability transfer, training access, learner support, and practical skills infrastructure.",
+    Vectra: "Best for trade corridor risk visibility, origin confidence index, verification workflows, and decision-support intelligence for international trade.",
+    Vorisc: "Best for credit pre-disbursement risk intelligence, post-allocation exposure mitigation, and asset operational oversight.",
+    Visio: "Best for internal control, workflow observability, operational transparency, and process-level oversight.",
+    Vantage: "Best for strategic growth, position assessment, and high-impact capital and resource decisions.",
   };
 
   function updateAnswer(field, value) {
@@ -392,10 +426,10 @@ function BusinessScanModal({ onClose }) {
               options={[
                 "Business trust",
                 "Internal controls",
-                "Fleet operations",
+                "Workflow observability",
                 "Supplier verification",
                 "Trade risk",
-                "Capability transfer",
+                "Strategic growth",
                 "Funding readiness",
               ]}
               onChange={(value) => updateAnswer("priority", value)}
@@ -407,10 +441,10 @@ function BusinessScanModal({ onClose }) {
               options={[
                 "Risk signals",
                 "Business structure",
-                "Vehicle and delivery activity",
+                "Workflow visibility",
                 "Supplier confidence",
-                "Staff capability",
-                "Compliance readiness",
+                "Position and growth outlook",
+                "Operational transparency",
               ]}
               onChange={(value) => updateAnswer("challenge", value)}
             />
@@ -421,10 +455,10 @@ function BusinessScanModal({ onClose }) {
               options={[
                 "Build trust",
                 "Reduce risk",
-                "Monitor operations",
+                "Improve operational transparency",
                 "Verify suppliers",
-                "Prepare for funding",
-                "Improve capability",
+                "Prioritize capital decisions",
+                "Assess market position",
               ]}
               onChange={(value) => updateAnswer("outcome", value)}
             />
