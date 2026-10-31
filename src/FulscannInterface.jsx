@@ -55,16 +55,6 @@ function CheckIcon({ className = "h-5 w-5" }) {
 
 const products = [
   {
-    name: "Vectra",
-    label: "Trade corridor risk intelligence",
-    description: "For trade corridor risk visibility, origin confidence index, verification workflows, and decision-support intelligence for international trade.",
-    Icon: RiskSignalIcon,
-    href: "https://vectra.fulscann.com",
-    accent: "from-amber-400 to-orange-500",
-    bg: "bg-amber-50",
-    text: "text-amber-700",
-  },
-  {
     name: "Vorisc",
     label: "Credit risk intelligence",
     description: "For credit pre-disbursement risk intelligence, post-allocation exposure mitigation, and asset operational oversight.",
@@ -73,16 +63,6 @@ const products = [
     accent: "from-amber-400 to-orange-500",
     bg: "bg-amber-50",
     text: "text-amber-700",
-  },
-  {
-    name: "VeriLab",
-    label: "Business trust",
-    description: "For SME diagnostics, internal control mechanism, and operational intelligence.",
-    Icon: CubeIcon,
-    href: "https://verilab.fulscann.com",
-    accent: "from-blue-500 to-indigo-500",
-    bg: "bg-blue-50",
-    text: "text-blue-700",
   },
   {
     name: "Visio",
@@ -95,6 +75,16 @@ const products = [
     text: "text-violet-700",
   },
   {
+    name: "Vectra",
+    label: "Trade corridor risk intelligence",
+    description: "For trade corridor risk visibility, origin confidence index, verification workflows, and decision-support intelligence for international trade.",
+    Icon: RiskSignalIcon,
+    href: "https://vectra.fulscann.com",
+    accent: "from-amber-400 to-orange-500",
+    bg: "bg-amber-50",
+    text: "text-amber-700",
+  },
+  {
     name: "Vantage",
     label: "Strategic growth",
     description: "Position assessment, growth strategy support, and high-impact capital and resource decision-making.",
@@ -103,6 +93,16 @@ const products = [
     accent: "from-violet-500 to-fuchsia-500",
     bg: "bg-violet-50",
     text: "text-violet-700",
+  },
+  {
+    name: "VeriLab",
+    label: "Business trust",
+    description: "For SME diagnostics, internal control mechanism, and operational intelligence.",
+    Icon: CubeIcon,
+    href: "https://verilab.fulscann.com",
+    accent: "from-blue-500 to-indigo-500",
+    bg: "bg-blue-50",
+    text: "text-blue-700",
   },
 ];
 
