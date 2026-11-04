@@ -631,17 +631,22 @@ export default function FulscannInterface() {
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="https://explore.fulscann.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-7 text-base font-bold text-white shadow-xl shadow-violet-200 transition hover:opacity-95"
+                >
+                  Explore deliverables
+                </a>
+
                 <button
                   type="button"
                   onClick={() => setScanOpen(true)}
-                  className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-violet-600 px-7 text-base font-bold text-white shadow-xl shadow-blue-200 transition hover:opacity-95"
+                  className="inline-flex h-14 items-center justify-center rounded-full border border-slate-200 bg-white px-7 text-base font-bold text-slate-950 transition hover:bg-slate-50"
                 >
                   Scan your business
                 </button>
-
-                <a href="#method" className="inline-flex h-14 items-center justify-center rounded-full border border-slate-200 bg-white px-7 text-base font-bold text-slate-950 transition hover:bg-slate-50">
-                  Explore deliverables
-                </a>
               </div>
             </motion.div>
 
