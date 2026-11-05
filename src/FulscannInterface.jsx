@@ -632,7 +632,7 @@ export default function FulscannInterface() {
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="https://explore.fulscann.com"
+                  href="https://vorisc.fulscann.com"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex h-14 items-center justify-center rounded-full bg-gradient-to-r from-violet-600 to-fuchsia-600 px-7 text-base font-bold text-white shadow-xl shadow-violet-200 transition hover:opacity-95"
